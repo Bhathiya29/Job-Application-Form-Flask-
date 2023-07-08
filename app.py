@@ -2,8 +2,9 @@ from flask import Flask, render_template, request, flash
 from flask_sqlalchemy import SQLAlchemy  # This library allows us to access the db with more high level code
 from datetime import datetime
 
-app = Flask(__name__,
-            template_folder='template')  # Creating the app instance | if the template is not found use the second argument
+
+# Creating the app instance | if the template is not found use the second argument
+app = Flask(__name__, template_folder='template')
 
 app.config['SECRET_KEY'] = 'Application98'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
